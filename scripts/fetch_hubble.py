@@ -40,4 +40,3 @@ def fetch_hubble_collection(collection_title):
     for image in collection:
         image_id = image['id']
         fetch_hubble_image(image_id)
-        print(image_id)
