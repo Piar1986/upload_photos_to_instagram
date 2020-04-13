@@ -11,7 +11,7 @@ if __name__ == '__main__':
     Path('images').mkdir(parents=True, exist_ok=True)
     Path('formated_images').mkdir(parents=True, exist_ok=True)
 
-    #fetch_spacex_last_launch()
-    #fetch_hubble_collection(hubble_collection_title)
-    #format_images()
+    fetch_spacex_last_launch()
+    fetch_hubble_collection(hubble_collection_title)
+    format_images()
     upload_images()
