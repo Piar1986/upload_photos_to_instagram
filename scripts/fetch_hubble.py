@@ -27,7 +27,7 @@ def fetch_hubble_image(image_id):
     images_src = response.json()['image_files'][-1]['file_url']
     file_url = urljoin(base_url, images_src)
     file_extension = get_file_extension(file_url)
-    filename = 'hubble' + str(image_id) + '.' + file_extension
+    filename = f'hubble{image_id}.{file_extension}'
     download_image(file_url, filename)
 
 

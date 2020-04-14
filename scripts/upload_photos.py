@@ -21,7 +21,7 @@ def format_images(source_folder='images', recipient_folder='formated_images'):
         cropped_image.thumbnail((1080, 1080))
 
         image_title = file.split('.')[0]
-        new_image = image_title + '.jpg'
+        new_image = f'{image_title}.jpg'
         new_image_path = os.path.join(recipient_folder, new_image)
         cropped_image.save(new_image_path)
 

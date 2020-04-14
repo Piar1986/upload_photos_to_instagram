@@ -17,5 +17,5 @@ def fetch_spacex_last_launch():
     response.raise_for_status()
     images_url = response.json()['links']['flickr_images']
     for image_number, url in enumerate(images_url):
-        filename = 'spacex' + str(image_number) + '.jpg'
+        filename = f'spacex{image_number}.jpg'
         download_image(url, filename)
