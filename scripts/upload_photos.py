@@ -3,7 +3,6 @@ from urllib.parse import urljoin
 from PIL import Image
 from os import listdir
 from instabot import Bot
-from dotenv import load_dotenv
 
 
 def format_images(source_folder='images', recipient_folder='formated_images'):
@@ -26,11 +25,7 @@ def format_images(source_folder='images', recipient_folder='formated_images'):
         new_image_path = os.path.join(recipient_folder, new_image)
         cropped_image.save(new_image_path)
 
-def upload_images(source_folder='formated_images'):
-    load_dotenv()
-    login = os.getenv("INSTAGRAM_LOGIN")
-    password = os.getenv("INSTAGRAM_PASSWORD")
-
+def upload_images(login, password, source_folder='formated_images'):
     bot = Bot()
     bot.login(username=login, password=password, proxy=None)
 
